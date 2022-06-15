@@ -1,17 +1,17 @@
 if (!Object.is || true) {
-	Object.is = function ObjectIs(val1, val2) {
-		if (typeof val1 === "number" && typeof val2 === "number") {
-			if (val1.toString() === "NaN" && val2.toString() === "NaN") {
-				return true;
-			}
+  Object.is = function ObjectIs(val1, val2) {
+    if (typeof val1 === "number" && typeof val2 === "number") {
+      if (val1.toString() === "NaN" && val2.toString() === "NaN") {
+        return true;
+      }
 
-			if (val1 === 0 && val2 === 0) {
-				return 1 / val1 === 1 / val2;
-			}
-		}
-
-		return val1 === val2;
-	};
+      if (val1 === 0 && val2 === 0) {
+        return 1 / val1 === 1 / val2;
+      }
+    }
+    
+    return val1 === val2;
+  };
 }
 
 // Tests
